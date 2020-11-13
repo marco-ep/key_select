@@ -5,216 +5,135 @@ i=raw_input ("Please enter a key, major or minor (e.g. E minor)")
 ni=input ("Please enter number of chords you'd like :)")
 n=int(ni)
 
-al=['Amaj','Bmin','C#min','Dmaj','Emaj','F#min','G#Dim']
-aml=['Amin','Bdim','Cmaj','Dmin','Emin','Fmaj','Gmaj']
-abl=['Abmaj','Bbmin','Cmin','Dbmaj','Ebmaj','Fmin','Gdim']
-abml=['Abmin','Bbdim','Cbmaj','Dbmin','Ebmin','Fbmaj','GbDmaj']
-ashl=['A#maj','B#min','C##min','D#maj','E#maj','F##min','G##dim']
-ashml=['A#min','B#dim','C#maj','D#min','E#min','F#maj','G#maj']
-bbl=['Bbmaj','Cmin','Dmin','Ebmaj','Fmaj','Gmin','Adim']
-bbml=['Bbmin','Cdim','Dbmaj','Ebmin','Fmin','Gbmaj','Abmaj']
-bl=['Bmaj','C#min','D#min','Emaj','F#maj','G#min','A#dim']
-bml=['Bmin','C#dim','Dmaj','Emin','F#min','Gmaj','Amaj']
-bshl=['B#maj','C##min','D##min','E#maj','F##maj','G##min','A##dim']
-bshml=['B#min','C##dim','D#maj','E#min','F##min','G#maj','A#maj']
-cbl=['Cbmaj','Dbmin','Ebmin','Fbmaj','Gbmaj','Abmin','Bbdim']
-cbml=['Cbmin','Dbdim','Ebbmaj','Fbmin','Gbmin','Abbmaj','Bbbmaj']
-cl=['Cmaj','Dmin','Emin','Fmaj','Gmaj','Amin','Bdim']
-cml=['Cmin','Ddim','Ebmaj','Fmin','Gmin','Abmaj','Bbmaj']
-cshl=['C#maj','D#min','E#min','F#maj','G#maj','A#min','B#dim']
-cshml=['C#min','D#dim','Emaj','F#min','G#min','Amaj','Bmaj']
-dbl=['Dbmaj','Ebmin','Fmin','Gbmaj','Abmaj','Bbmin','Cdim']
-dbml=['Dbmin','Ebdim','Fbmaj','Gbmin','Abmin','Bbbmaj','Cbmaj']
-dl=['Dmaj','Emin','F#min','Gmaj','Amaj','Bmin','C#dim']
-dml=['Dmin','Edim','Fmaj','Gmin','Amin','Bbmaj','Cmaj']
-dshl=['D#maj','E#min','F##min','G#maj','A#maj','B#min','C##dim']
-dshml=['D#min','E#dim','F#maj','G#min','A#min','Bmaj','C#maj']
-ebl=['Ebmaj','Fmin','Gmin','Abmaj','Bbmaj','Cmin','Ddim']
-ebml=['Ebmin','Fdim','Gbmaj','Abmin','Bbmin','Cbmaj','Dbmaj']
-el=['Emaj','F#min','G#min','Amaj','Bmaj','C#min','D#dim']
-eml=['Emin','F#dim','Gmaj','Amin','Bmin','Cmaj','Dmaj']
-eshl=['E#maj','F##min','G##min','A#maj','B#maj','C##min','D##dim']
-eshml=['E#min','F##dim','G#maj','A#min','B#min','C#maj','D#maj']
-fbl=['Fbmaj','Gbmin','Abmin','Bbbmaj','Cbmaj','Dbmin','Ebdim']
-fbml=['Fbmin','Gbdim','Abbmaj','Bbbmin','Cbmin','Dbbmaj','Ebbmaj']
-fl=['Fmaj','Gmin','Amin','Bbmaj','Cmaj','Dmin','Edim']
-fml=['Fmin','Gdim','Abmaj','Bbmin','Cmin','Dbmaj','Ebmaj']
-fshl=['F#maj','G#min','A#min','Bmaj','C#maj','D#min','E#dim']
-fshml=['F#min','G#dim','Amaj','Bmin','C#min','Dmaj','Emaj']
-gbl=['Gbmaj','Abmin','Bbmin','Cbmaj','Dbmaj','Ebmin','Fdim']
-gbml=['Gbmin','Abdim','Bbbmaj','Cbmin','Dbmin','Ebbmaj','Fbmaj']
-gl=['Gmaj','Amin','Bmin','Cmaj','Dmaj','Emin','F#dim']
-gml=['Gmin','Adim','Bbmaj','Cmin','Dmin','Ebmaj','Fmaj']
-gshl=['G#maj','A#min','B#min','C#maj','D#maj','E#min','F##dim']
-gshml=['G#min','A#dim','Bmaj','C#min','D#min','Emaj','F#maj']
-a= ("A major")
-am=("A minor")
-ab=("Ab major")
-abm=("Ab minor")
-ash=("A# major")
-ashm=("A# minor")
-bb=("Bb major")
-bbm=("Bb minor")
-b=("B major")
-bm=("B minor")
-bsh=("B# major")
-bshm=("B# minor")
-cb=("Cb major")
-cbm=("Cb minor")
-c=("C major")
-cm=("C minor")
-csh=("C# major")
-cshm=("C# minor")
-db=("Db major")
-dbm=("Db minor")
-d=("D major")
-dm=("D minor")
-dsh=("D# major")
-dshm=("D# minor")
-eb=("Eb major")
-ebm=("Eb minor")
-e=("E major")
-em=("E minor")
-esh=("E# major")
-eshm=("E# minor")
-fb=("Fb major")
-fbm=("Fb minor")
-f=("F major")
-fm=("F minor")
-fsh=("F# major")
-fshm=("F# minor")
-gb=("Gb major")
-gbm=("Gb minor")
-g=("G major")
-gm=("G minor")
-gsh=("G# major")
-gshm=("G# minor")
 
-if i==a:
-	print random.sample((al),n)
 
-if i==am:
-	print random.sample((aml),n)
+if i=="A major":
+	j=['Amaj','Bmin','C#min','Dmaj','Emaj','F#min','G#Dim']
 
-if i==ab:
-	print random.sample((abl),n)
+if i =="A minor":
+	j= ['Amin','Bdim','Cmaj','Dmin','Emin','Fmaj','Gmaj']
 
-if i==abm:
-	print random.sample((abml),n)
+if i =="Ab major":
+	j= ['Abmaj','Bbmin','Cmin','Dbmaj','Ebmaj','Fmin','Gdim']
 
-if i==ash:
-	print random.sample((ashl),n)
+if i =="Ab minor":
+	j= ['Abmin','Bbdim','Cbmaj','Dbmin','Ebmin','Fbmaj','GbDmaj']
 
-if i==ashm:
-	print random.sample((ashml),n)
+if i =="A# major":
+	j= ['A#maj','B#min','C##min','D#maj','E#maj','F##min','G##dim']
 
-if i==bb:
-	print random.sample((bbl),n)
+if i =="A# minor":
+	j= ['A#min','B#dim','C#maj','D#min','E#min','F#maj','G#maj']
 
-if i==bbm:
-	print random.sample((bbml),n)
+if i =="Bb major":
+	j=['Bbmaj','Cmin','Dmin','Ebmaj','Fmaj','Gmin','Adim']
 
-if i==b:
-	print random.sample((bl),n)
+if i =="Bb minor":
+	j= ['Bbmin','Cdim','Dbmaj','Ebmin','Fmin','Gbmaj','Abmaj']
 
-if i==bm:
-	print random.sample((bml),n)
+if i =="B major":
+	j= ['Bmaj','C#min','D#min','Emaj','F#maj','G#min','A#dim']
 
-if i==bsh:
-	print random.sample((bshl),n)
+if i =="B minor":
+	j= ['Bmin','C#dim','Dmaj','Emin','F#min','Gmaj','Amaj']
 
-if i==bshm:
-	print random.sample((bshml),n)
+if i =="B# major":
+	j= ['B#maj','C##min','D##min','E#maj','F##maj','G##min','A##dim']
 
-if i==cb:
-	print random.sample((cbl),n)
+if i =="B# minor":
+	j= ['B#min','C##dim','D#maj','E#min','F##min','G#maj','A#maj']
 
-if i==cbm:
-	print random.sample((cbml),n)
+if i =="Cb major":
+	j= ['Cbmaj','Dbmin','Ebmin','Fbmaj','Gbmaj','Abmin','Bbdim']
 
-if i==c:
-	print random.sample((cl),n)
+if i =="Cb minor":
+	j= ['Cbmin','Dbdim','Ebbmaj','Fbmin','Gbmin','Abbmaj','Bbbmaj']
 
-if i==cm:
-	print random.sample((cml),n)
+if i =="C major":
+	j= ['Cmaj','Dmin','Emin','Fmaj','Gmaj','Amin','Bdim']
 
-if i==csh:
-	print random.sample((cshl),n)
+if i =="C minor":
+	j= ['Cmin','Ddim','Ebmaj','Fmin','Gmin','Abmaj','Bbmaj']
 
-if i==cshm:
-	print random.sample((cshml),n)
+if i =="C# major":
+	j= ['C#maj','D#min','E#min','F#maj','G#maj','A#min','B#dim']
 
-if i==db:
-	print random.sample((dbl),n)
+if i =="C# minor":
+	j= ['C#min','D#dim','Emaj','F#min','G#min','Amaj','Bmaj']
 
-if i==dbm:
-	print random.sample((dbml),n)
+if i =="Db major":
+	j= ['Dbmaj','Ebmin','Fmin','Gbmaj','Abmaj','Bbmin','Cdim']
 
-if i==d:
-	print random.sample((dl),n)
+if i =="Db minor":
+	j= ['Dbmin','Ebdim','Fbmaj','Gbmin','Abmin','Bbbmaj','Cbmaj']
 
-if i==dm:
-	print random.sample((dml),n)
+if i =="D major":
+	j= ['Dmaj','Emin','F#min','Gmaj','Amaj','Bmin','C#dim']
 
-if i==dsh:
-	print random.sample((dshl),n)
+if i =="D minor":
+	j= ['Dmin','Edim','Fmaj','Gmin','Amin','Bbmaj','Cmaj']
 
-if i==dshm:
-	print random.sample((dshml),n)
+if i =="D# major":
+	j= ['D#maj','E#min','F##min','G#maj','A#maj','B#min','C##dim']
 
-if i==eb:
-	print random.sample((ebl),n)
+if i =="D# minor":
+	j= ['D#min','E#dim','F#maj','G#min','A#min','Bmaj','C#maj']
 
-if i==ebm:
-	print random.sample((ebml),n)
+if i =="Eb major":
+	j= ['Ebmaj','Fmin','Gmin','Abmaj','Bbmaj','Cmin','Ddim']
 
-if i==e:
-	print random.sample((el),n)
+if i =="Eb minor":
+	j= ['Ebmin','Fdim','Gbmaj','Abmin','Bbmin','Cbmaj','Dbmaj']
 
-if i==em:
-	print random.sample((eml),n)
+if i =="E major":
+	j= ['Emaj','F#min','G#min','Amaj','Bmaj','C#min','D#dim']
 
-if i==esh:
-	print random.sample((eshl),n)
+if i =="E minor":
+	j= ['Emin','F#dim','Gmaj','Amin','Bmin','Cmaj','Dmaj']
 
-if i==eshm:
-	print random.sample((eshml),n)
+if i =="E# major":
+	j= ['E#maj','F##min','G##min','A#maj','B#maj','C##min','D##dim']
 
-if i==fb:
-	print random.sample((fbl),n)
+if i =="E# minor":
+	j= ['E#min','F##dim','G#maj','A#min','B#min','C#maj','D#maj']
 
-if i==fbm:
-	print random.sample((fbml),n)
+if i =="Fb major":
+	j= ['Fbmaj','Gbmin','Abmin','Bbbmaj','Cbmaj','Dbmin','Ebdim']
 
-if i==f:
-	print random.sample((fl),n)
+if i =="Fb minor":
+	j= ['Fbmin','Gbdim','Abbmaj','Bbbmin','Cbmin','Dbbmaj','Ebbmaj']
 
-if i==fm:
-	print random.sample((fml),n)
+if i =="F major":
+	j= ['Fmaj','Gmin','Amin','Bbmaj','Cmaj','Dmin','Edim']
 
-if i==fsh:
-	print random.sample((fshl),n)
+if i =="F minor":
+	j= ['Fmin','Gdim','Abmaj','Bbmin','Cmin','Dbmaj','Ebmaj']
 
-if i==fshm:
-	print random.sample((fshml),n)
+if i =="F# major":
+	j= ['F#maj','G#min','A#min','Bmaj','C#maj','D#min','E#dim']
 
-if i==gb:
-	print random.sample((gbl),n)
+if i =="F# minor":
+	j= ['F#min','G#dim','Amaj','Bmin','C#min','Dmaj','Emaj']
 
-if i==gbm:
-	print random.sample((gbml),n)
+if i =="Gb major":
+	j= ['Gbmaj','Abmin','Bbmin','Cbmaj','Dbmaj','Ebmin','Fdim']
 
-if i==g:
-	print random.sample((gl),n)
+if i =="Gb minor":
+	j= ['Gbmin','Abdim','Bbbmaj','Cbmin','Dbmin','Ebbmaj','Fbmaj']
 
-if i==gm:
-	print random.sample((gml),n)
+if i =="G major":
+	j= ['Gmaj','Amin','Bmin','Cmaj','Dmaj','Emin','F#dim']
 
-if i==gsh:
-	print random.sample((gshl),n)
+if i =="G minor":
+	j= ['Gmin','Adim','Bbmaj','Cmin','Dmin','Ebmaj','Fmaj']
 
-if i==gshm:
-	print random.sample((gshml),n)
+if i =="G# major":
+	j= ['G#maj','A#min','B#min','C#maj','D#maj','E#min','F##dim']
 
+if i =="G# minor":
+	j= ['G#min','A#dim','Bmaj','C#min','D#min','Emaj','F#maj']
+
+
+print random.sample((j),n)
 
 	
